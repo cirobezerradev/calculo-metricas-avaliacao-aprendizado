@@ -51,7 +51,8 @@ Mede a proporção de casos negativos reais que foram corretamente identificados
 <br><img width="228" height="40" alt="especif" src="https://github.com/user-attachments/assets/b1e0e3bf-2455-4782-a4e4-31a3329a8d05" /><br>
 **Logo:**
 <br> Especificidade = 90 /(90 + 20) ≅ 0,81 ou ≅ 81%
-> No caso do Filtro de Spam, se a métrica de especificide for baixa, haverá muito alerta falso de Spam, isso ocorre quando a taxa de FP está alta. Portanto o ideal é termos uma métrica especificidade alta pois evita alarme falso de spam.
+> No controle de bagagens em aeroportos, se a especificidade for baixa, muitas malas sem risco seriam classificadas como suspeitas (falsos positivos), gerando filas enormes, custos operacionais e atrasos.
+Nesse contexto, é interessante ter alta especificidade, pois o sistema só deve acionar alerta quando houver um motivo realmente plausível.
 
 ---
 ### Acurácia (Accuracy)
@@ -66,6 +67,7 @@ Mede a proporção de previsões positivas que foram realmente corretas.
 <br><img width="176" height="40" alt="precisao" src="https://github.com/user-attachments/assets/17dc8b6a-74d2-4f43-9333-50a85d0e2d08" /><br>
 **Logo:**
 <br> Precisao = 80 / (80+20) = 0,8 ou 80%
+> Em sistemas de spam, muitas vezes se dá mais peso à precisão, para não classificar mensagens legítimas como spam.
 
 ---
 ### F-score (F1-score)
@@ -75,6 +77,9 @@ Mede a proporção de previsões positivas que foram realmente corretas.
 <br> F-score = 2 * (Precisao * Sensibilidade) / (Precisao + Sensibilidade) = 2 * 0,704 / 1,68 ≅ 0,83 ou ≅ 83% <br>
 > F-Score é particularmente útil em conjuntos de dados desbalanceados, onde a acurácia pode não ser uma boa medida de desempenho, ou seja, um alto F-score indica que tanto tem uma alta precisão quanto uma alta sensibilidadde.
 
+---
+## Conclusão
+No aprendizado de máquina, não existe uma métrica universal que seja sempre a melhor. O que deve guiar a escolha é o contexto de uso do modelo, ou seja, é importante analisar quais métricas são mais relevantes para cada contexto.
 
 
 
