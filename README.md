@@ -8,3 +8,55 @@ métodos e suas fórmulas correspondentes (Tabela 1).
 Para a leitura dos valores de VP, VN, FP e FN, será necessário escolher uma matriz
 de confusão para a base dos cálculos. Essa matriz você pode escolher de forma
 arbitraria, pois nosso objetivo é entender como funciona cada métrica. 
+
+Escolhi um exemplo aleatório de uma matriz de filtro de SPAM
+
+## Matriz de Confusão — Filtro de SPAM
+
+<table>
+  <tr>
+    <th rowspan="2" colspan="2">Matriz de Confusão</th>
+    <th colspan="2">Valores de Previsão</th>
+  </tr>
+  <tr>
+    <th>SPAM</th>
+    <th>NÃO SPAM</th>
+  </tr>
+  <tr>
+    <td rowspan="2"><b>Valor Real</b></td>
+    <td><b>SPAM</b></td>
+    <td>VP = 80 🟩</td>
+    <td>FN = 10 🟥</td>
+  </tr>
+  <tr>
+    <td><b>NÃO SPAM</b></td>
+    <td>FP = 20 🟥</td>
+    <td>VN = 90 🟩</td>
+  </tr>
+</table>
+
+---
+## Cálculo de Métricas
+
+### Sensibilidade (Recall)
+Mede a proporção de casos positivos reais que foram corretamente identificados pelo modelo.
+<br><img width="214" height="40" alt="sensibilidade" src="https://github.com/user-attachments/assets/3827fe8b-2166-4078-ac97-04278f9d6757" /><br>
+**Logo:** 
+<br> Sensibilidade = 80 / (80 + 10) ≅ 0,88 ou ≅ 88%
+
+---
+### Especificidade
+Mede a proporção de casos negativos reais que foram corretamente identificados pelo modelo.
+<br><img width="228" height="40" alt="especif" src="https://github.com/user-attachments/assets/b1e0e3bf-2455-4782-a4e4-31a3329a8d05" /><br>
+**Logo:**
+<br> Especificidade = 90 /(90 + 20) ≅ 0,81 ou ≅ 81%
+
+---
+### Acurácia (Accuracy)
+Mede a proporção total de previsões corretas (tanto positivas quanto negativas) em relação ao número total de casos.
+<br><img width="282" height="40" alt="acuracia" src="https://github.com/user-attachments/assets/8ea62f06-5521-43fa-b7d2-ebd1a96e8d1a" /><br>
+**Logo:**
+<br> Acuracia = (80 + 90) / (80 + 90 + 10 + 20) = 170 / 200 ≅ 0,85 ou ≅ 85%
+
+
+
